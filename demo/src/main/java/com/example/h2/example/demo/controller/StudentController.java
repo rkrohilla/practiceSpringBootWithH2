@@ -1,5 +1,6 @@
 package com.example.h2.example.demo.controller;
 
+import com.example.h2.example.demo.dto.StudentDTO;
 import com.example.h2.example.demo.entity.Student;
 import com.example.h2.example.demo.service.StudentService;
 import java.util.List;
@@ -16,7 +17,7 @@ public class StudentController {
   @Autowired
   StudentService studentService;
   @GetMapping("/students")
-  public List<Student> retrieveStudents() {
+  public StudentDTO retrieveStudents() {
     return studentService.fetchAllStudents();
   }
 
